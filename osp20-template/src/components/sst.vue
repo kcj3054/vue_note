@@ -8,19 +8,26 @@
     <button @click="speech_stop">녹음 멈추기</button>
 
     <h3>{{ $store.state.history }}</h3>
+    <div class="image-warpper">
+      <img :src="image.download_url" :alt="image.author" v-for="(image,i) in images" :key="i">
+    </div>
   </div>
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   data() {
     return {
-      value: "hello world ",
+      value: "",
       description: "녹음을 시작하세요.",
       recognition: null,
       result: "",
       button_disabled: false,
     };
+  },
+  computed : {
+    ...mapState(['images'])
   },
   mounted() {
     // 크롬에서 webkit이 들어가있다 
@@ -64,10 +71,16 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 #btn {
   font-size: 30px;
   width: 100px;
   height: 60px;
+}
+.image-warpper {
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 </style>

@@ -15,9 +15,8 @@
         },
         data : function() {
           return {
-              query : '무엇이든 입력해보시오'   
+              query : ''   
           }
-          
         },
     }
 </script>

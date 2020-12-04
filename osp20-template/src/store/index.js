@@ -6,11 +6,15 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     history: [],
+    images : [],
   },
   mutations: {
     add(state, value) {
       state.history = value;
     },
+    setImages (state, payload) {
+      state.images = payload
+    }
   },
   actions: {
     addToHistory(context, value) {

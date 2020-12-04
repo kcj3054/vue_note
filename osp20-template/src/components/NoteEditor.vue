@@ -22,15 +22,6 @@
         <compact-picker v-model="colors" />
       </div>
     </div>
-    <div>
-      <p>{{ value }}</p>
-      <p>{{ description }}</p>
-      <button id="btn" :disabled="button_disabled" @click="speech_start">
-        버튼
-      </button>
-      <button @click="speech_stop">녹음 멈추기</button>
-      <p>{{ $store.state.history }}</p>
-    </div>
   </div>
 </template>
 
