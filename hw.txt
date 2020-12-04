@@ -1,5 +1,0 @@
-main()
-{
-	printf("Hello World!");
-}
-//팀원이 수정
